@@ -1,6 +1,7 @@
 from flask import Flask,render_template,jsonify, request  
 from src.utils import  download_hugging_face_embedding
-from langchain_pinecone import PineconeVectorStore
+#from langchain_pinecone import PineconeVectorStore
+from langchain.vectorstores import Pinecone
 from src.prompt import *
 import os
 from dotenv import load_dotenv
@@ -22,7 +23,7 @@ embeddings = download_hugging_face_embedding()
 
 index_name  = "medicalbot"
 
-docsearch = PineconeVectorStore.from_existing_index(index_name=index_name,embedding=embeddings)
+docsearch = Pinecone.from_existing_index(index_name=index_name,embedding=embeddings)
 
 retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k":3})
 
