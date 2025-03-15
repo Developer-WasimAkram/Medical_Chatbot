@@ -1,21 +1,23 @@
 from flask import Flask,render_template,jsonify, request  
 from src.utils import  download_hugging_face_embedding
 #from langchain_pinecone import PineconeVectorStore
-from langchain.vectorstores import Pinecone
+#from langchain.vectorstores import Pinecone
+from langchain_community.vectorstores import Pinecone
 from src.prompt import *
 import os
 from dotenv import load_dotenv
-load_dotenv()
+
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 
+load_dotenv()
 
 
 
-PINECONE_API_KEY=os.environ.get('PINECONE_API_KEY')
-os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
+os.environ['PINECONE_API_KEY'] = os.getenv('PINECONE_API_KEY')
+
 
 app = Flask(__name__)
 

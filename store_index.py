@@ -10,7 +10,7 @@ embeddings = download_hugging_face_embedding()
 from pinecone import Pinecone
 from pinecone import ServerlessSpec
 #from langchain_pinecone import PineconeVectorStore
-from langchain.vectorstores import Pinecone
+from langchain_community.vectorstores import Pinecone
 from dotenv import load_dotenv
 import os
 
