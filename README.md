@@ -1,4 +1,3 @@
-# Medical_Chatbot
 ---
 title: Medical Chatbot
 emoji: 🐢
