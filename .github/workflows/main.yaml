@@ -25,4 +25,4 @@ jobs:
 
         run: git push --force https://wasimakram:$HF_TOKEN@//huggingface.co/spaces/wasimaakram/Chatbot_Medical main
 
-        https:
+      
