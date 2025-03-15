@@ -7,10 +7,11 @@ python-dotenv
 pinecone[grpc]
 langchain-pinecone
 langchain_community
-langchain_openai
+
 langchain_groq
 langchain_experimental
 langchain_huggingface
 langchain_huggingface
 ipykernel
+
 -e .
