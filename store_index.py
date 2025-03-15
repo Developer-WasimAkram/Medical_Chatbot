@@ -7,7 +7,7 @@ text_chunks = split_text(extracted_data)
 embeddings = download_hugging_face_embedding()
 
 
-from pinecone.grpc import PineconeGRPC as Pinecone
+from pinecone import Pinecone
 from pinecone import ServerlessSpec
 from langchain_pinecone import PineconeVectorStore
 from dotenv import load_dotenv
