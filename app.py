@@ -16,7 +16,7 @@ load_dotenv()
 
 
 
-os.environ['PINECONE_API_KEY'] = os.getenv('PINECONE_API_KEY')
+#os.environ['PINECONE_API_KEY']=os.getenv('PINECONE_API_KEY')
 
 
 app = Flask(__name__)
